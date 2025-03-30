@@ -1,0 +1,13 @@
+@import "../../_assets/scss/variaveis";
+@import "../../_assets/scss/breakpoints";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.rodape {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  div {
+    padding: 15px 0;
+  }
+}

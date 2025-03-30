@@ -1,0 +1,123 @@
+@import "../../_assets/scss/variaveis";
+
+.color_button {
+  color: $verde-loud;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 101vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.offcanvas {
+  transition:
+    transform 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  background-color: #1d1d1d;
+}
+
+.offcanvas_menu_itens {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid $color-grey;
+  width: 100%;
+  background-color: #1d1d1d;
+  cursor: pointer;
+  p,
+  i,
+  a {
+    color: $verde-loud;
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: white;
+    color: $color-light;
+    i,
+    p,
+    a {
+      color: #1d1d1d;
+    }
+  }
+}
+
+.offcanvas_menu_itens_links_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  border-bottom: 1px solid $color-grey;
+  p,
+  i {
+    color: $verde-loud;
+    margin: 0;
+  }
+  a {
+    cursor: pointer;
+  }
+}
+
+.link:hover {
+  background-color: white;
+  color: inherit;
+  outline: none;
+}
+
+.toogle_menu {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &:hover {
+    .menu_toggle_icon {
+      color: white;
+    }
+  }
+}
+
+.submenu_container {
+  border-left: 3px solid $color-primary;
+  border-right: 3px solid $color-primary;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.3s ease-out;
+}
+
+.menu_toggle_icon {
+  position: absolute;
+  right: 0;
+  color: $color-primary;
+}
+
+.botao_close {
+  color: $verde-loud;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &:hover {
+    color: #a2ff66;
+  }
+}
+
+@media (max-width: 500px) {
+  .offcanvas.offcanvas_start.show {
+    width: 100%;
+  }
+}

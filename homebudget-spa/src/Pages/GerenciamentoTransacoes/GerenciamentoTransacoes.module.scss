@@ -1,0 +1,247 @@
+@import "../../_assets/scss/variaveis";
+@import "../../_assets/scss/breakpoints";
+
+.m2 {
+  margin: 2rem 0;
+}
+
+.m4 {
+  margin: 4rem 0;
+}
+
+.my6 {
+  margin: 6rem 0 0 0;
+}
+
+.my10 {
+  margin: 10rem 0;
+}
+
+.receitas {
+  background-color: #07980c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  width: 280px;
+  height: 50px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: 3px 3px;
+}
+
+.despesas {
+  background-color: #d10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  width: 280px;
+  height: 50px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: 3px 3px;
+}
+
+.total {
+  background-color: #02779e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  width: 280px;
+  height: 50px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: 3px 3px;
+  text-align: center;
+}
+
+.carteira_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  z-index: 998;
+  text-align: center;
+  span {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.carteira {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.dropup_container {
+  position: relative;
+  cursor: pointer;
+}
+
+.dados_carteira_item {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.visible {
+  opacity: 1;
+  height: auto;
+}
+.wallet_container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: $verde-loud;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  font-size: 15px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  margin: 5px;
+}
+
+.wallet_container:hover {
+  background-color: white;
+  border: #000000 solid 1px;
+}
+
+.botoes_secao {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header_container {
+  padding: 3px;
+  position: relative;
+  h1 {
+    text-shadow: 2px 3px 6px #000000;
+  }
+}
+
+.gerenciamento_transacoes {
+  //background-image: url("/imgs/img1.png"), url("/imgs/img4.jpg");
+  background-size: 250px, 250px;
+  background-position:
+    right top,
+    left bottom;
+  background-repeat: no-repeat;
+}
+
+h3 {
+  text-shadow: 2px 3px 6px #000000;
+}
+
+.negativo {
+  color: red;
+  font-weight: bold;
+}
+
+.datepicker_container {
+  border-radius: 8px;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+.wiggle_icon {
+  top: 7%;
+  right: 2%;
+  position: absolute;
+  animation: wiggle 1s infinite;
+  display: inline-block;
+  cursor: pointer;
+
+  i {
+    color: red;
+  }
+}
+
+.wiggle_icon:hover {
+  animation: none;
+  transform: rotate(0deg);
+}
+
+.tabs-container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab_button {
+  flex: 1;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: #f8f8f8;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.tab_button.active {
+  background: #15998e;
+  color: white;
+  font-weight: bold;
+}
+
+.tab_button:hover {
+  background: #ddd;
+}
+
+.tab_panel {
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.tab_content {
+  padding: 10px;
+}
+
+.datepicker_shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

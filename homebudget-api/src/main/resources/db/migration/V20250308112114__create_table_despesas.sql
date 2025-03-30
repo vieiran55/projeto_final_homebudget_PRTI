@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS despesas (
+    id SERIAL PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    categoria VARCHAR(255) NOT NULL,
+    valor DECIMAL(10,2) NOT NULL,
+    descricao TEXT,
+    data DATE NOT NULL,
+    created_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT NOW(),
+    CONSTRAINT fk_despesas_users FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);

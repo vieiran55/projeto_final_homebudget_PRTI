@@ -1,0 +1,2 @@
+ALTER TABLE investimentos
+    ALTER COLUMN id TYPE BIGINT USING id::BIGINT;

@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15.8
+    container_name: homebudget-db
+    environment:
+      POSTGRES_DB: homebudget
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    networks:
+      - homebudget-net
+    volumes:
+      - homebudget-data:/var/lib/postgresql/data
+
+networks:
+  homebudget-net:
+    driver: bridge
+
+volumes:
+  homebudget-data:
+    driver: local

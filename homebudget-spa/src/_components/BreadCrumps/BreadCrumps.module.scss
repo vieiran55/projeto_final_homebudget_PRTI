@@ -1,0 +1,16 @@
+@import "../../_assets/scss/variaveis";
+@import "../../_assets/scss/breakpoints";
+
+.breadCrumps {
+  color: #ffffff;
+  font-size: 20px;
+  & ol {
+    color: #ffffff;
+    & li {
+      color: #ffffff;
+      & i {
+        font-size: 20px;
+      }
+    }
+  }
+}

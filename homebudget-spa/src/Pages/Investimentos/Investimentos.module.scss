@@ -1,0 +1,197 @@
+@import "../../_assets/scss/variaveis";
+@import "../../_assets/scss/breakpoints";
+
+.m4 {
+  margin: 4rem 0;
+}
+
+.carteira_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  z-index: 998;
+  text-align: center;
+  span {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.carteira {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.dropup_container {
+  position: relative;
+  cursor: pointer;
+}
+
+.dados_carteira_item {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.visible {
+  opacity: 1;
+  height: auto;
+}
+.wallet_container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: $verde-loud;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  font-size: 15px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  margin: 5px;
+}
+
+.wallet_container:hover {
+  background-color: white;
+  border: #000000 solid 1px;
+}
+
+.botoes_secao {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.datepicker_container {
+  border-radius: 8px;
+}
+/* Fundo transparente para o modal */
+.modal {
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Exibição do modal */
+.modal.show {
+  display: flex;
+}
+
+/* Caixa do modal */
+.modal_dialog {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Cabeçalho */
+.modal_header {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+/* Título do modal */
+.modal_title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Corpo do modal */
+.modal_body {
+  padding: 1rem;
+}
+
+/* Rodapé do modal */
+.modal_footer {
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Botão "fechar" */
+.btn_close {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Botões primários e secundários */
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn_primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.btn_primary:hover {
+  background-color: #0056b3;
+}
+
+.btn_secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+}
+
+.btn_secondary:hover {
+  background-color: #545b62;
+}
+
+.datepicker_shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

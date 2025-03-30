@@ -1,0 +1,80 @@
+@import "../../_assets/scss/variaveis";
+@import "../../_assets/scss/breakpoints";
+
+.avatarContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $verde-loud;
+  color: #111;
+  border-radius: 999px;
+  width: auto;
+  padding: 10px;
+  height: 50px;
+  margin-right: 20px;
+  max-width: 250px;
+  cursor: pointer;
+
+  & img {
+    width: 46px;
+    height: 46px;
+    padding: 2px;
+    margin: 5px;
+  }
+
+  & h2 {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: #111;
+  }
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+.fa-caret-down {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(90% + 0px);
+  right: 20px;
+  background-color: $verde-loud;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 100px;
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 5px;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #111;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  &:hover {
+    background-color: white;
+  }
+}

@@ -1,0 +1,113 @@
+/* Fundo transparente para o modal */
+.modal {
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Exibição do modal */
+.modal.show {
+  display: flex;
+}
+
+/* Caixa do modal */
+.modal_dialog {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+  top: 20%;
+}
+
+/* Cabeçalho */
+.modal_header {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+/* Título do modal */
+.modal_title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Corpo do modal */
+.modal_body {
+  padding: 1rem;
+}
+
+/* Rodapé do modal */
+.modal_footer {
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Botão "fechar" */
+.btn_close {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Botões primários e secundários */
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn_primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.btn_primary:hover {
+  background-color: #0056b3;
+}
+
+.btn_secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+}
+
+.btn_secondary:hover {
+  background-color: #545b62;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
